@@ -1,6 +1,8 @@
-# Pikënisja — Java II
-
-Lexo ../README.md. Krijo skedarët e kërkuar në folderin tënd JavaII; ky folder përmban vetëm skeletin ose të dhënat hyrëse. 
-
-Shëno para kodimit: hyrjet, daljet, një rast normal dhe dy raste kufitare.
-
+Muzeu i Sendeve — Dokumentacioni i ProjektitKy projekt është një ndërfaqe uebi (front-end) e ndërtuar në kuadër të lëndës Programimi në WWW. Faqja paraqet një ekspozitë digjitale të objekteve të zakonshme (Çelësi, Filxhani, Bileta) me një dizajn modern, të përshtatshëm për pajisje të ndryshme (responsive) dhe të qasshëm.   📁 Struktura e ProjektitPlaintext.
+├── index.html      # Struktura kryesore semantike e faqes
+├── style.css       # Stilimi vizual, CSS Grid, Flexbox dhe përshtatshmëria
+├── celesi.svg      # Vektori grafik i çelësit
+├── filxhani.svg    # Vektori grafik i filxhanit
+├── bileta.svg     # Vektori grafik i biletës
+└── README.md       # Dokumentacioni i projektit
+🚀 Teknologjitë e PërdoruraHTML5: Përdorim i etiketimeve semantike (<header>, <main>, <article>, <details>, <summary>, <footer>) për strukturë të pastër dhe qasje të lehtë (accessibility).   CSS3: Përdorim i CSS Grid për radhitjen e kartelave, Flexbox për vendosjen e elementeve brenda kartelave, si dhe Media Queries për ekranet e vogla.   SVG Graphics: Imazhe vektoriale që ruajnë cilësinë pa marrë parasysh madhësinë e ekranit.   🔑 Veçoritë KryesoreLundrimi i Shpejtë (Navigation): Lidhje direkte te secili objekt brenda faqes.   Kartelat e Objekteve (Cards): Radhitje në 3 kolona me sfond të posaçëm për imazhet SVG.   Përmbajtja e Palosshme (<details>): Menytë interaktive "Historia e fshehur" që hapen/mbyllen me klikim.   Qasshmëria (Accessibility): Lidhje e fshehur (.skip) për të kërcyer te përmbajtja kryesore me lexues ekrani ose tastierë.   Dizajn Responsive: Në ekrane më të vogla se 800px, kartelat radhiten automatikisht në 1 kolonë të vetme.   📋 Shënime Teknike (Hyrjet, Daljet dhe Rastet Kufitare)Hyrjet (Inputs): Skedarët grafikë SVG, tekstet përshkruese dhe stilet CSS.   Daljet (Outputs): Faqe statike interaktive që përputhet saktësisht me pamjen referuese.   Rast normal: Ekzekutimi në ekran me gjerësi standarde (desktop) ku 3 kartelat shfaqen krah për krah.   Rastet kufitare (Edge cases):Pajisjet mobile (ekran < 800px): Grid-i kalon nga 3 kolona në 1 kolonë me renditje vertikale.Lundrimi me tastierë: Shtypja e tastit Tab shfaq lidhjen .skip në krye të faqes për navigim të shpejtë.   💻 Si ta ekzekutoni projektinShkarkoni ose klononi të gjithë skedarët në të njëjtën dosje (folder).Hapni skedarin index.html direkt në çdo shfletues uebi (Google Chrome, Firefox, Safari, Edge).   
