@@ -3,77 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Muzeu i sendeve</title>
+    <title>Muzeu i sendeve të zakonshme</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <a class="skip" href="#main">Kalo te përmbajtja</a>
-
-    <!-- Seksioni i kokës (Header) -->
     <header>
-      <p class="subtitle">Programimi në WWW · Zgjidhje reference</p>
+      <p>Programimi në WWW · Zgjidhje reference</p>
       <h1>Muzeu i sendeve</h1>
-      <div class="header-line"></div>
     </header>
-
-    <!-- Përmbajtja kryesore -->
+    <nav aria-label="Seksionet">
+      <a href="#celesi">Çelësi</a>
+      <a href="#filxhani">Filxhani</a>
+      <a href="#bileta">Bileta</a>
+    </nav>
     <main id="main">
-      <nav class="nav-links">
-        <a href="#celesi">Çelësi</a>
-        <a href="#filxhani">Filxhani</a>
-        <a href="#bileta">Bileta</a>
-      </nav>
+      <p class="expo">Ekspozita: <time datetime="2026-10-01">1 tetor 2026</time></p>
 
-      <p class="exhibition-date">Ekspozita: 1 tetor 2026</p>
-
-      <div class="cards-grid">
-        <!-- Kartela 1: Çelësi -->
+      <div class="cards">
         <article class="card" id="celesi">
           <h2>Çelësi</h2>
-          <div class="image-container">
-            <img src="celesi.svg" alt="Çelësi" />
-          </div>
-          <p class="card-text">
-            Hapja e një dere mund të jetë fillimi i një historie.
-          </p>
+          <figure>
+            <img src="celesi.svg" alt="Një çelës i vjetër me kokë të rrumbullakët" width="210" height="210" />
+            <figcaption>Hapja e një dere mund të jetë fillimi i një historie.</figcaption>
+          </figure>
           <details>
             <summary>Historia e fshehur</summary>
+            <p>Ky çelës u gjet në një sirtar, pa e ditur askush çfarë dere hapte.</p>
           </details>
         </article>
 
-        <!-- Kartela 2: Filxhani -->
         <article class="card" id="filxhani">
           <h2>Filxhani</h2>
-          <div class="image-container">
-            <img src="filxhani.svg" alt="Filxhani" />
-          </div>
-          <p class="card-text">
-            Një filxhan mbledh kujtime nga bisedat.
-          </p>
+          <figure>
+            <img src="filxhani.svg" alt="Një filxhan blu me vesh" width="210" height="210" />
+            <figcaption>Një filxhan mbledh kujtime nga bisedat.</figcaption>
+          </figure>
           <details>
             <summary>Historia e fshehur</summary>
+            <p>Çdo mëngjes ky filxhan ka qenë pjesë e bisedës së parë të ditës.</p>
           </details>
         </article>
 
-        <!-- Kartela 3: Bileta -->
         <article class="card" id="bileta">
           <h2>Bileta</h2>
-          <div class="image-container">
-            <img src="bileta.svg" alt="Bileta" />
-          </div>
-          <p class="card-text">
-            Një udhëtim i shkurtër, një kujtim i gjatë.
-          </p>
+          <figure>
+            <img src="bileta.svg" alt="Një biletë e verdhë me vijë të ndërprerë" width="210" height="210" />
+            <figcaption>Një udhëtim i shkurtër, një kujtim i gjatë.</figcaption>
+          </figure>
           <details>
             <summary>Historia e fshehur</summary>
+            <p>Kjo biletë u ruajt pas një udhëtimi të shkurtër që nuk u harrua kurrë.</p>
           </details>
         </article>
       </div>
     </main>
-
-    <!-- Seksioni i fundit (Footer) -->
-    <footer>
-      Shembull mësimor · Të dhëna të sajuara · Vetëm front end
-    </footer>
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
   </body>
 </html>
