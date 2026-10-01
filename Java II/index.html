@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Muzeu i sendeve</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+
+    <!-- Seksioni i kokës (Header) -->
+    <header>
+      <p class="subtitle">Programimi në WWW · Zgjidhje reference</p>
+      <h1>Muzeu i sendeve</h1>
+      <div class="header-line"></div>
+    </header>
+
+    <!-- Përmbajtja kryesore -->
+    <main id="main">
+      <nav class="nav-links">
+        <a href="#celesi">Çelësi</a>
+        <a href="#filxhani">Filxhani</a>
+        <a href="#bileta">Bileta</a>
+      </nav>
+
+      <p class="exhibition-date">Ekspozita: 1 tetor 2026</p>
+
+      <div class="cards-grid">
+        <!-- Kartela 1: Çelësi -->
+        <article class="card" id="celesi">
+          <h2>Çelësi</h2>
+          <div class="image-container">
+            <img src="celesi.svg" alt="Çelësi" />
+          </div>
+          <p class="card-text">
+            Hapja e një dere mund të jetë fillimi i një historie.
+          </p>
+          <details>
+            <summary>Historia e fshehur</summary>
+          </details>
+        </article>
+
+        <!-- Kartela 2: Filxhani -->
+        <article class="card" id="filxhani">
+          <h2>Filxhani</h2>
+          <div class="image-container">
+            <img src="filxhani.svg" alt="Filxhani" />
+          </div>
+          <p class="card-text">
+            Një filxhan mbledh kujtime nga bisedat.
+          </p>
+          <details>
+            <summary>Historia e fshehur</summary>
+          </details>
+        </article>
+
+        <!-- Kartela 3: Bileta -->
+        <article class="card" id="bileta">
+          <h2>Bileta</h2>
+          <div class="image-container">
+            <img src="bileta.svg" alt="Bileta" />
+          </div>
+          <p class="card-text">
+            Një udhëtim i shkurtër, një kujtim i gjatë.
+          </p>
+          <details>
+            <summary>Historia e fshehur</summary>
+          </details>
+        </article>
+      </div>
+    </main>
+
+    <!-- Seksioni i fundit (Footer) -->
+    <footer>
+      Shembull mësimor · Të dhëna të sajuara · Vetëm front end
+    </footer>
+  </body>
+</html>
