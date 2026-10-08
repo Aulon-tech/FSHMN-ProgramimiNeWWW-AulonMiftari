@@ -1,0 +1,150 @@
+/* Box Model global me border-box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f2f6f8;
+  color: #17263c;
+  line-height: 1.5;
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Skip Link për Aksesueshmëri */
+.skip {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #005a52;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.skip:focus {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+/* Header */
+.site-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #005a52;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #556070;
+}
+
+.main-title {
+  font-size: 2rem;
+  color: #17263c;
+  margin-top: 0.25rem;
+}
+
+/* Poster Card */
+.poster-card {
+  background-color: #ffffff;
+  border: 1px solid #d1dbe5;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Etiketat - Përdorim linja solid, dashed dhe inner outline për dallim pa u bazuar te ngjyra */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #005a52;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+/* 1. Falas: Kornizë e plotë (Solid) */
+.tag-free {
+  border: 1.5px solid #005a52;
+}
+
+/* 2. Vende të kufizuara: Kornizë me ndërprerje (Dashed) */
+.tag-limited {
+  border: 1.5px dashed #005a52;
+}
+
+/* 3. Edhe online: Kornizë me vije të dyfishtë / offset outline */
+.tag-online {
+  border: 1.5px solid #005a52;
+  outline: 1px solid #005a52;
+  outline-offset: -3px;
+}
+
+/* Përmbajtja e afishes */
+.poster-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #17263c;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.poster-meta {
+  font-size: 0.95rem;
+  color: #556070;
+  margin-bottom: 1rem;
+}
+
+.poster-description {
+  font-size: 1rem;
+  color: #17263c;
+  margin-bottom: 1.5rem;
+}
+
+/* Bouton / Lidhja e regjistrimit */
+.btn-primary {
+  display: inline-block;
+  background-color: #005a52;
+  color: #ffffff;
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00423c;
+}
+
+/* Gjendje e dukshme focus-visible për navigim me Tab */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #005a52;
+  outline-offset: 3px;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #556070;
+}
