@@ -1,0 +1,168 @@
+/* Reset themelor për të përshtatur dimensionet */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 1rem;
+  background-color: #f7f9fa;
+  color: #333;
+}
+
+/* Kalo te përmbajtja (Për aksesueshmëri) */
+.skip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.skip:focus {
+  top: 0;
+}
+
+/* Struktura qendrore */
+header, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Menuja Fleksibile */
+.flex-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.flex-menu a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+.flex-menu a:hover,
+.flex-menu a:focus {
+  text-decoration: underline;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+}
+
+main h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* ======= GRID SISTEMI (Media Queries) ======= */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: Nën 600px - 1 kolonë */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Për pajisje tablet (600px deri 899px) - 2 kolona */
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Për ekrane të gjera (900px e sipër) - 3 kolona */
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ======= STILIMI I KARTËS ======= */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Parandalon që elementet të dalin nga korniza */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: 100%; /* Siguron që të gjitha kartat në një rresht të Grid jenë njëlloj të larta */
+}
+
+/* Imazhi fleksibël */
+.card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+/* Përmbajtja rritet (flex-grow) për ta mbajtur butonin në fund */
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.category {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  /* Siguron që fjalët shumë të gjata apo titujt +100 karaktere të mos prishin lartësinë / layout-in */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.time {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Butoni gjithmonë poshtë (margin-top: auto) */
+.btn {
+  margin-top: auto;
+  display: inline-block;
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #004494;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2rem;
+}
