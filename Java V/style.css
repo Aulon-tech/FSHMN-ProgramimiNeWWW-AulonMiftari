@@ -1,0 +1,107 @@
+/* Stilizimi i përgjithshëm */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 2rem auto;
+  max-width: 900px;
+  background-color: #f4f6f8;
+  color: #1a2b3c;
+}
+
+h2 {
+  color: #0b213f;
+  margin-bottom: 0.5rem;
+}
+
+.header-line {
+  border: 0;
+  border-top: 2px solid #146c59;
+  margin-bottom: 1.5rem;
+}
+
+/* Stilizimi i formularit */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 250px;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+fieldset {
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+legend {
+  color: #334155;
+  padding: 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.radio-group {
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-group {
+  margin-top: 1rem;
+}
+
+.btn-submit {
+  background-color: #146c59;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.btn-submit:hover {
+  background-color: #0f5243;
+}
+
+/* Stilizimi i tabelës */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #ffffff;
+}
+
+caption {
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+table, th, td {
+  border: 1px solid #cbd5e1;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f8fafc;
+  color: #0b213f;
+}
