@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Planifiko një pasdite me 20 euro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <header>
+      <p>Programimi në WWW · Pikënisja</p>
+      <h1>Planifiko një pasdite me 20 euro</h1>
+    </header>
+    <main id="main">
+      <h2>Kalkulatori i buxhetit</h2>
+      <form id="forma" novalidate>
+        <div class="fushe">
+          <label for="cmimi">Çmimi për person (€)</label>
+          <input id="cmimi" type="number" step="0.01" min="0" value="4" />
+        </div>
+        <div class="fushe">
+          <label for="persona">Numri i personave</label>
+          <select id="persona">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option selected>5</option>
+          </select>
+        </div>
+        <div class="fushe">
+          <label for="buxheti">Buxheti (€)</label>
+          <input id="buxheti" type="number" step="0.01" min="0" value="20" />
+        </div>
+        <button type="submit">Llogarit</button>
+      </form>
+
+      <section id="rezultati" aria-live="polite" hidden></section>
+    </main>
+
+    <section class="reflektim">
+      <h2>Reflektim: 0, "0", null dhe NaN</h2>
+      <ul>
+        <li><code>0</code> është numër i vlefshëm, por <em>falsy</em> në kushte.</li>
+        <li><code>"0"</code> është string; është <em>truthy</em> (string jo bosh) dhe <code>"0" + 1</code> jep <code>"01"</code>.</li>
+        <li><code>null</code> është mungesë e qëllimshme vlere; <code>typeof null</code> jep <code>"object"</code> dhe <code>Number(null)</code> jep <code>0</code>.</li>
+        <li><code>NaN</code> është i tipit number, por nuk është i barabartë as me veten; testohet me <code>Number.isNaN()</code>.</li>
+      </ul>
+      <p>Prandaj funksioni përdor <code>typeof</code> dhe <code>Number.isFinite</code>, jo <code>if (!x)</code>, që do të refuzonte gabimisht <code>0</code>.</p>
+    </section>
+
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
+
+    <script type="module">
+      import { llogarit, ekzekutoTestet } from "./logjika.js";
+
+      const forma = document.getElementById("forma");
+      const rezultati = document.getElementById("rezultati");
+      const euro = (x) => x.toFixed(2) + " €"; // vetëm për shfaqje
+
+      ekzekutoTestet(); // shih rezultatin në konsolë (F12)
+
+      forma.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const r = llogarit(
+          document.getElementById("cmimi").valueAsNumber,
+          Number(document.getElementById("persona").value),
+          document.getElementById("buxheti").valueAsNumber
+        );
+
+        rezultati.hidden = false;
+        if (!r.ok) {
+          rezultati.className = "keq";
+          rezultati.textContent = r.error;
+          return;
+        }
+        rezultati.className = r.brenda ? "mire" : "keq";
+        rezultati.innerHTML = `
+          <p><strong>${r.brenda ? "Futesh në buxhet." : "Tejkalon buxhetin."}</strong></p>
+          <p>Totali: ${euro(r.total)}</p>
+          <p>${r.mbetja >= 0 ? "Të mbeten" : "Të mungojnë"}: ${euro(Math.abs(r.mbetja))}</p>`;
+      });
+    </script>
+  </body>
+</html>
